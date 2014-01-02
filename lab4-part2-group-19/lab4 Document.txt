@@ -1,0 +1,51 @@
+lab4/kernel/arm:
+WireInOutHandler.c:
+	Used for install and restore SWI and IRQ handler. For SWI, we will first go to address 0x08 and find out the address where stores the address of the function the process will go when enter the supervisor mode, then wire in our own function to this address. For IRQ, the address first to go is 0x18.
+
+S_Handler.S:
+	The wrapper function for swi handler, which responsible for storing current context and restore r8, get the swi number then call the swi handler and pass the swi number to it. After the return of the swi handler, restore the context.
+
+swi.c:
+	The actual swi handler, the main job is to go to corresponding system function according to the swi number. Before go to the system function enable IRQ and when the functon return disable the IRQ.
+
+int_asm.S:
+	A wrapper function for interrupt handler. When we go to that function, we are under the IRQ mode, so first we store the context of previous mode into stack and then switch to supervisor mode in order to execute the interrupt handler under the supervisor mode. When return from the IRQ handler, restore the previous context.
+
+interrupt.c:
+	void init_interrupt(void): set interrupt register ICMR, ICLR to appropriate value.
+	void irq_handler(void): figure out what kind of interrupt occurred now and go to the correspoinding interrupt handler function. When return from the interrupt handler function, looking up the global variable reschedul, if the value is 1, which means need context switch go to the dispatch_save() function to fulfill that.
+
+timer.c: 
+	void init_timer(void): initiate the OS timer register OSMR, OIER, OSSR, OSCR to appropriate value.
+	timer_handler(unsigned int int_num): the specific interrupt handler used to handle the interrupt caused by the OS timer. Add the global variable systemTime by 1; reset the OS Timer register; go to the dev_update() function pulling all of the devices to find out whether there are some tasks can be removed from sleep queue and added to the run queue.
+
+preForUser.S:
+	Switch to user mode and go to the user program.
+
+lab4/kernel/syscall:
+io.c:
+	Read and write system call.
+
+proc.c:
+	int task_create(task_t* tasks, size_t num_tasks): look at the task_t data structure to learn everything needed about the tasks. Call the function allocate_tasks.
+	int event_wait(unsigned int dev): this function will be called when one task at the end of its once process. Call the function dev_wait in order to add the task into the sleep queue.
+
+time.c:
+	Time and sleep system call.
+
+lab4/kernel/lock
+mutex.c
+  The HLP is used here: set current priority to zero when locking, and reset to native priority when unlocking.
+  mutex_init: Initialize the mutexes, set each mutex as available and not locked. 
+  mutex_create: create mutexes. If the mutex is available, then it can be created, and it is made unavailable afterwards. This function returns the mutex number of the mutex created. 
+  mutex_lock: This function locks the mutex. If it's already locked, then put the current task to sleep queue; if it's not, then lock the mutex. 
+  mutex_unlock: unlock the mutex, and put the next waiting task in the run queue. 
+
+lab4:
+main.c: 
+	the main function of the kernel.
+
+device.c:
+	void dev_wait(unsigned int dev): put the current task into sleep queue.
+	void dev_update(unsigned long millis):Signals the occurrence of an event on all applicable devices. This function should be called on timer interrupts to determine that the interrupt corresponds to the event frequency of a device. If the interrupt corresponded to the interrupt frequency of a device, this function should ensure that the task is made ready to run.
+	

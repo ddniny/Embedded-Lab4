@@ -1,0 +1,549 @@
+dagger result:
+GUM> fatload mmc 0 a3000000 kernel.bin
+reading kernel.bin
+
+5328 bytes read
+GUM> fatload mmc 0 a0000000 dagger.bin
+reading dagger.bin
+
+608 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<@@<
+
+
+cyclone result:
+GUM> fatload mmc 0 a3000000 kernel.bin
+reading kernel.bin
+
+5560 bytes read
+GUM> fatload mmc 0 a0000000 cyclone.bin
+reading cyclone.bin
+
+8072 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+Test begin
+Time now is 10
+Time now is 30
+Time now is 60
+Time now is 100
+Time now is 150
+Time now is 210
+Time now is 280
+Time now is 360
+Time now is 450
+Time now is 550
+Time now is 660
+Time now is 780
+Time now is 910
+Time now is 1050
+Time now is 1200
+Time now is 1360
+Time now is 1530
+Time now is 1710
+Time now is 1900
+Time now is 2100
+Time now is 2310
+Time now is 2530
+Time now is 2760
+Time now is 3000
+Time now is 3250
+Time now is 3510
+Time now is 3780
+Time now is 4060
+Time now is 4350
+Time now is 4650
+Test ends!!
+
+
+sys_err result:
+GUM> fatload mmc 0 a3000000 kernel.bin
+reading kernel.bin
+
+5328 bytes read
+GUM> fatload mmc 0 a0000000 sys_err.bin
+reading sys_err.bin
+
+8688 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+TEST BEGIN!
+
+Task number should be within 0 to 63.
+1. Test create return EINVAL
+        SUCCESS ****************
+
+Address is invalid2. Test create return EFAULT
+        SUCCESS ****************
+
+Address is invalidTask number should be within 0 to 63.
+pxa2xx_clkpwr_write: CPU frequency change attempt
+
+
+U-Boot 1.2.0 (May 10 2008 - 21:17:19) - PXA270@400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  256 MB
+Flash: 32 MB
+Using default environment
+
+Hit any key to stop autoboot:  0 
+
+
+stress result:
+
+GUM> fatload mmc 0 a3000000 kernel.bin
+reading kernel.bin
+
+5560 bytes read
+GUM> fatload mmc 0 a0000000 stress.bin
+reading stress.bin
+
+8552 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+Test begins
+Time is now 0
+Time is now 0
+Time is now 1
+Time is now 3
+Time is now 6
+Time is now 10
+Time is now 15
+Time is now 21
+Time is now 28
+Time is now 36
+Time is now 45
+Time is now 56
+Time is now 68
+Time is now 80
+Time is now 93
+Time is now 100
+Time is now 107
+Time is now 122
+Time is now 138
+Time is now 155
+Time is now 173
+Time is now 192
+Time is now 200
+Time is now 200
+Time is now 212
+Time is now 233
+Time is now 255
+Time is now 278
+Time is now 300
+Time is now 300
+Time is now 302
+Time is now 327
+Time is now 353
+Time is now 380
+Time is now 400
+Time is now 400
+Time is now 401
+Time is now 408
+Time is now 437
+Time is now 467
+Time is now 498
+Time is now 500
+Time is now 500
+Time is now 530
+Time is now 563
+Time is now 597
+Time is now 600
+Time is now 600
+Time is now 601
+Time is now 603
+Time is now 632
+Time is now 668
+Time is now 700
+Time is now 700
+Time is now 800
+Time is now 800
+Time is now 801
+Time is now 804
+Time is now 900
+Time is now 900
+Time is now 902
+Time is now 1000
+Time is now 1000
+Time is now 1002
+Time is now 1006
+Time is now 1100
+Time is now 1100
+Time is now 1200
+Time is now 1200
+Time is now 1201
+Time is now 1203
+Time is now 1206
+Time is now 1211
+Time is now 1300
+Time is now 1300
+Time is now 1400
+Time is now 1400
+Time is now 1401
+Time is now 1407
+Time is now 1500
+Time is now 1500
+Time is now 1502
+Time is now 1506
+Time is now 1600
+Time is now 1600
+Time is now 1601
+Time is now 1605
+Time is now 1612
+Time is now 1700
+Time is now 1700
+Time is now 1800
+Time is now 1800
+Time is now 1801
+Time is now 1804
+Time is now 1809
+Time is now 1817
+Time is now 1900
+Time is now 1900
+Time is now 2000
+Time is now 2000
+Time is now 2001
+Time is now 2004
+Time is now 2008
+Time is now 2017
+Time is now 2100
+Time is now 2100
+Time is now 2102
+Time is now 2108
+Time is now 2200
+Time is now 2200
+Time is now 2201
+Time is now 2211
+Time is now 2300
+Time is now 2300
+Time is now 2400
+Time is now 2400
+Time is now 2401
+Time is now 2404
+Time is now 2407
+Time is now 2412
+Time is now 2419
+Time is now 2430
+Time is now 2500
+Time is now 2500
+Time is now 2504
+Time is now 2600
+Time is now 2600
+Time is now 2601
+Time is now 2613
+Time is now 2700
+Time is now 2700
+Time is now 2702
+Time is now 2710
+Time is now 2800
+Time is now 2800
+Time is now 2801
+Time is now 2804
+Time is now 2810
+Time is now 2823
+Time is now 2900
+Time is now 2900
+Time is now 3000
+Time is now 3000
+Time is now 3001
+Time is now 3004
+Time is now 3009
+Time is now 3014
+Time is now 3023
+Time is now 3037
+Time is now 3100
+Time is now 3100
+Time is now 3200
+Time is now 3200
+Time is now 3201
+Time is now 3204
+Time is now 3211
+Time is now 3226
+Time is now 3300
+Time is now 3300
+Time is now 3302
+Time is now 3312
+Time is now 3400
+Time is now 3400
+Time is now 3401
+Time is now 3417
+Time is now 3500
+Time is now 3500
+Time is now 3504
+Time is now 3510
+Time is now 3600
+Time is now 3600
+Time is now 3601
+Time is now 3603
+Time is now 3606
+Time is now 3611
+Time is now 3619
+Time is now 3630
+Time is now 3647
+Time is now 3700
+Time is now 3700
+Time is now 3800
+Time is now 3800
+Time is now 3801
+Time is now 3900
+Time is now 3900
+Time is now 3902
+Time is now 4000
+Time is now 4000
+Time is now 4001
+Time is now 4004
+Time is now 4008
+Time is now 4016
+Time is now 4025
+Time is now 4100
+Time is now 4200
+Time is now 4200
+Time is now 4201
+Time is now 4204
+Time is now 4209
+Time is now 4215
+Time is now 4228
+Time is now 4300
+Time is now 4400
+Time is now 4400
+Time is now 4401
+Time is now 4405
+Time is now 4415
+Time is now 4500
+Time is now 4500
+Time is now 4502
+Time is now 4506
+Time is now 4514
+Time is now 4600
+Time is now 4600
+Time is now 4601
+Time is now 4700
+Time is now 4800
+Time is now 4800
+Time is now 4801
+Time is now 4803
+Time is now 4806
+Time is now 4811
+Time is now 4819
+Time is now 4830
+Time is now 4846
+Time is now 4900
+Time is now 4900
+Time is now 5000
+Time is now 5000
+Time is now 5002
+Time is now 5006
+Time is now 5015
+Time is now 5100
+Time is now 5100
+Time is now 5102
+Time is now 5200
+Time is now 5200
+Time is now 5201
+Time is now 5205
+Time is now 5217
+Time is now 5300
+Time is now 5400
+Time is now 5400
+Time is now 5402
+Time is now 5404
+Time is now 5409
+Time is now 5417
+Time is now 5434
+Time is now 5500
+Time is now 5500
+Time is now 5504
+Time is now 5600
+Time is now 5600
+Time is now 5601
+Time is now 5604
+Time is now 5610
+Time is now 5617
+Time is now 5630
+Time is now 5700
+Time is now 5700
+Time is now 5702
+Time is now 5800
+Time is now 5800
+Time is now 5801
+Time is now 5900
+Time is now 6000
+Time is now 6001
+Time is now 6002
+Time is now 6004
+Time is now 6007
+Time is now 6011
+Time is now 6016
+Time is now 6025
+Time is now 6036
+Time is now 6050
+Time is now 6069
+Time is now 6100
+Time is now 6200
+Time is now 6200
+Time is now 6201
+Time is now 6300
+Time is now 6300
+Time is now 6302
+Time is now 6308
+Time is now 6317
+Time is now 6400
+Time is now 6400
+Time is now 6401
+Time is now 6404
+Time is now 6411
+Time is now 6426
+Time is now 6500
+Time is now 6500
+Time is now 6504
+Time is now 6600
+Time is now 6600
+Time is now 6601
+Time is now 6604
+Time is now 6609
+Time is now 6619
+Time is now 6640
+Time is now 6700
+Time is now 6800
+Time is now 6800
+Time is now 6801
+Time is now 6804
+Time is now 6820
+Time is now 6900
+Time is now 6900
+Time is now 6902
+Time is now 7000
+Time is now 7000
+Time is now 7001
+Time is now 7005
+Time is now 7011
+Time is now 7020
+Time is now 7033
+Time is now 7100
+Time is now 7200
+Time is now 7200
+Time is now 7201
+Time is now 7203
+Time is now 7206
+Time is now 7211
+Time is now 7218
+Time is now 7226
+Time is now 7237
+Time is now 7254
+Time is now 7277
+Time is now 7300
+Time is now 7400
+Time is now 7400
+Time is now 7401
+Time is now 7500
+Time is now 7500
+Time is now 7502
+Time is now 7506
+Time is now 7520
+Time is now 7600
+Time is now 7600
+Time is now 7601
+Time is now 7604
+Time is now 7700
+Time is now 7700
+Time is now 7706
+Time is now 7800
+Time is now 7800
+Time is now 7801
+Time is now 7803
+Time is now 7808
+Time is now 7821
+Time is now 7900
+Time is now 8000
+Time is now 8000
+Time is now 8001
+Time is now 8004
+Time is now 8008
+Time is now 8016
+Time is now 8026
+Time is now 8041
+Time is now 8100
+Time is now 8100
+Time is now 8102
+Time is now 8110
+Time is now 8200
+Time is now 8200
+Time is now 8300
+Time is now 8400
+Time is now 8400
+Time is now 8401
+Time is now 8404
+Time is now 8407
+Time is now 8412
+Time is now 8419
+Time is now 8431
+Time is now 8445
+Time is now 8465
+Time is now 8500
+Time is now 8500
+Time is now 8505
+Time is now 8600
+Time is now 8600
+Time is now 8700
+Time is now 8700
+Time is now 8702
+Time is now 8800
+Time is now 8800
+Time is now 8801
+Time is now 8804
+Time is now 8811
+Time is now 8821
+Time is now 8900
+Time is now 9000
+Time is now 9000
+Time is now 9001
+Time is now 9003
+Time is now 9007
+Time is now 9013
+Time is now 9021
+Time is now 9030
+Time is now 9044
+Time is now 9061
+Time is now 9100
+Time is now 9100
+Time is now 9106
+Time is now 9200
+Time is now 9200
+Time is now 9201
+Time is now 9205
+Time is now 9300
+Time is now 9300
+Time is now 9302
+Time is now 9400
+Time is now 9400
+Time is now 9500
+Time is now 9500
+Time is now 9505
+Time is now 9600
+Time is now 9600
+Time is now 9601
+Time is now 9603
+Time is now 9606
+Time is now 9611
+Time is now 9618
+Time is now 9629
+Time is now 9644
+Time is now 9667
+Time is now 9700
+Time is now 9800
+Time is now 9800
+Time is now 9801
+Time is now 9807
+Time is now 9900
+Time is now 9900
+Time is now 9902
+Time is now 9911
+Time is now 9921
+Time is now 10000
+Time is now 10000
+Time is now 10001
+Time is now 10004
+Time is now 10009

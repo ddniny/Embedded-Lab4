@@ -1,0 +1,7 @@
+fatload mmc 0 a3000000 kernel.bin
+fatload mmc 0 a0000000 dagger.bin
+
+set architecture armv5te
+target remote localhost:1234
+add-symbol-file /home/daniel/Documents/EmbeddedSystemLab/lab4-part1-group-19-wenting-part2-ok-compile/kernel/kernel 0xa3000000
+add-symbol-file /home/daniel/Documents/EmbeddedSystemLab/lab4-part1-group-19-wenting-part2-ok-compile/tasks/bin/stress 0xa0000000

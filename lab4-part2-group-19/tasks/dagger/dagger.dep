@@ -1,0 +1,23 @@
+/home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/dagger/dagger.o:  \
+ /home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/dagger/dagger.c \
+  /home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/stdio.h \
+  /home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/stdarg.h \
+  /home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/sys/types.h \
+  /home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/bits/types.h \
+  /home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/task.h \
+  /home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/unistd.h \
+  /home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/bits/fileno.h
+
+/home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/stdio.h:
+
+/home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/stdarg.h:
+
+/home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/sys/types.h:
+
+/home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/bits/types.h:
+
+/home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/task.h:
+
+/home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/unistd.h:
+
+/home/daniel/Documents/EmbeddedSystemLab/lab4/tasks/libc/include/bits/fileno.h:
